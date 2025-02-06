@@ -64,16 +64,61 @@
                 opacity: 0;
             }
         }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #b30000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: #ff4d4d;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 24px;
+            color: #b30000;
+        }
+        .popup button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #b30000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="rose-day">Happy Rose Day, My Love! 🌹</div>
-        <div class="message">You are the most beautiful flower in the garden of my life. 
-            Your love fills my heart with fragrance and happiness. 
+        <div class="rose-day">Happy Rose Day, My Love! 🌹🐵</div>
+        <div class="message">You are the most beautiful flower in the garden of my life.
+          
+          I LOVE YOU SO SO MUCH, ROSE nahh YOUUUU >>> hehe 
             May our love bloom forever like the most beautiful rose. 
             I love you, my Bandro! ❤️</div>
         <div class="heart">❤️</div>
+        <button class="button" onclick="showPopup()">Click Me</button>
+    </div>
+    
+    <div class="popup" id="popup">
+        <p>I LOVE YOU WIFEY 🐵❤️</p>
+        <button onclick="closePopup()">Close</button>
     </div>
     
     <script>
@@ -88,6 +133,13 @@
             }, 5000);
         }
         setInterval(createPetal, 300);
+
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+        }
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
     </script>
 </body>
 </html>
