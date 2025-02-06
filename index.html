@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day, My Love</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            color: #b30000;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .rose-day {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .message {
+            font-size: 22px;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+        .heart {
+            font-size: 50px;
+            margin-top: 10px;
+            animation: heartbeat 1s infinite alternate;
+        }
+        @keyframes heartbeat {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.2);
+            }
+        }
+        .petal {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff4d4d;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rose-day">Happy Rose Day, My Love! 🌹</div>
+        <div class="message">You are the most beautiful flower in the garden of my life. 
+            Your love fills my heart with fragrance and happiness. 
+            May our love bloom forever like the most beautiful rose. 
+            I love you, my Bandro! ❤️</div>
+        <div class="heart">❤️</div>
+    </div>
+    
+    <script>
+        function createPetal() {
+            const petal = document.createElement("div");
+            petal.classList.add("petal");
+            petal.style.left = Math.random() * window.innerWidth + "px";
+            petal.style.animationDuration = (Math.random() * 3 + 2) + "s";
+            document.body.appendChild(petal);
+            setTimeout(() => {
+                petal.remove();
+            }, 5000);
+        }
+        setInterval(createPetal, 300);
+    </script>
+</body>
+</html>
